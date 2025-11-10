@@ -1352,6 +1352,32 @@ body {
   opacity: 0.85;
 }
 
+.intro-content {
+  margin-top: -18vh; /* dorong sedikit ke atas */
+}
+/* ======== Penyesuaian posisi teks animasi agar lebih tinggi ======== */
+.hero {
+  position: fixed;
+  top: 4vmin; /* lebih ke atas */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92vw, 900px);
+  text-align: center;
+  z-index: 999;
+  pointer-events: none;
+  padding-top: 4vmin;
+  padding-bottom: 30vmin; /* 🟢 tambahkan ruang besar di bawah */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .hero {
+    top: 2vmin; /* lebih ke atas lagi di mobile */
+    padding-top: 8vmin;
+    padding-bottom: 40vmin; /* 🟢 ekstra ruang di HP agar teks jauh dari bunga */
+  }
+}
+
 .start-btn {
   padding: 0.8em 2.4em;
   font-size: 16px;
