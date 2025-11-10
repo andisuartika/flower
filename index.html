@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="not-loaded">
+    <body class="not-loaded">
+      <!-- INTRO SCREEN -->
+      <div id="intro-screen" class="intro-screen">
+        <div class="intro-content">
+          <h2>Hi, Nandaaa 🌷</h2>
+          <p>Siap untuk membasuh malam ini?</p>
+          <button id="startBtn" class="start-btn">Mulai</button>
+        </div>
+      </div>
+
+      <!-- TEKS ANIMASI -->
+      <header class="hero" aria-label="Greeting">
+        <h1><span id="typed" class="typed"></span></h1>
+        <div id="subtxt" class="subtxt"></div>
+      </header>
+
+      <!-- Kontrol musik -->
+      <div id="musicCtrl" class="music-ctrl" hidden>
+        <button id="playBtn" class="music-btn"><span>▶</span></button>
+        <div class="music-hint">Putar “Membasuh – Hindia”</div>
+      </div>
+
+      <!-- AUDIO -->
+      <audio
+        id="bgm"
+        src="./assets/membasuh.mp3"
+        preload="auto"
+        loop
+        playsinline
+      ></audio>
+
+      <div class="night"></div>
+      <div class="flowers"><!-- bunga kamu di sini --></div>
+
+      <div class="footer-note">dibuat dengan sepenuh hati ✦ malam ini</div>
+
+      <script src="./script.js"></script>
+    </body>
+
     <!-- TEKS ANIMASI -->
     <header class="hero" aria-label="Greeting">
       <h1><span id="typed" class="typed"></span></h1>
@@ -26,6 +65,7 @@
       id="bgm"
       src="./assets/membasuh.mp3"
       preload="auto"
+      autoplay
       loop
       playsinline
     ></audio>

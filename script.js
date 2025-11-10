@@ -1,3 +1,31 @@
+// INTRO SCREEN CONTROL
+window.addEventListener("DOMContentLoaded", () => {
+  const intro = document.getElementById("intro-screen");
+  const startBtn = document.getElementById("startBtn");
+  const audio = document.getElementById("bgm");
+
+  startBtn.addEventListener("click", async () => {
+    intro.classList.add("hide");
+    document.body.classList.remove("not-loaded"); // mulai animasi bunga
+
+    // mainkan musik dengan fade-in
+    try {
+      audio.volume = 0;
+      audio.muted = false;
+      await audio.play();
+      let v = 0;
+      const fade = setInterval(() => {
+        if (v < 0.7) {
+          v += 0.05;
+          audio.volume = v;
+        } else clearInterval(fade);
+      }, 200);
+    } catch (e) {
+      console.warn("Autoplay gagal:", e);
+    }
+  });
+});
+
 // Lepas .not-loaded agar animasi berjalan
 window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.remove("not-loaded");

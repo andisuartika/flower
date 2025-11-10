@@ -1318,3 +1318,70 @@ body {
   text-shadow: 0 0 6px rgba(0, 255, 250, 0.25);
   pointer-events: none;
 }
+
+/* ================== INTRO SCREEN ================== */
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at top, #001011, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2000;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro-content {
+  text-align: center;
+  color: #eaffff;
+  font-family: "Poppins", sans-serif;
+  animation: fadeInUp 1.2s ease both;
+}
+
+.intro-content h2 {
+  font-size: clamp(26px, 5vw, 48px);
+  margin-bottom: 0.4em;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+.intro-content p {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #b8f6ff;
+  margin-bottom: 1.5em;
+  opacity: 0.85;
+}
+
+.start-btn {
+  padding: 0.8em 2.4em;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00fff0, #ffe14a);
+  color: #001011;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 255, 255, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.start-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 24px rgba(255, 235, 72, 0.4);
+}
+
+/* efek keluar */
+.intro-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
